@@ -37,9 +37,13 @@ These instructions will get you a copy of the project up and running on your loc
 ### Running the app
 
 You can run the client and server concurrently with the following command:
-
+To execute Frontend:
 ```sh
-npm run dev
+npm start
+```
+To execute Backend:
+```sh
+node server.js
 ```
 
 This will start the React development server on `http://localhost:3000` and the Node.js server on `http://localhost:3001`.
