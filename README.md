@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# URL Shortener
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple full-stack URL shortener application built with React and Node.js.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+*   Shorten long URLs to a custom or randomly generated short code.
+*   Set an optional expiry time for shortened URLs.
+*   Redirects to the original URL when the shortened URL is visited.
+*   Displays a history of shortened URLs.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Frontend:** React
+*   **Backend:** Node.js, Express
+*   **Database:** In-memory JSON object (urlDatabase)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+*   Node.js and npm installed on your machine.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/your_username/ps1.git
+    ```
+2.  Install NPM packages for both the client and server
+    ```sh
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the app
 
-### `npm run eject`
+You can run the client and server concurrently with the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+npm run dev
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will start the React development server on `http://localhost:3000` and the Node.js server on `http://localhost:3001`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Endpoints
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### POST /api/shorten
 
-## Learn More
+Creates a new shortened URL.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Request Body:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "longUrl": "https://www.example.com",
+  "validityInMinutes": 60,
+  "shortCode": "my-short-url"
+}
+```
 
-### Code Splitting
+**Response:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```json
+{
+  "shortUrl": "http://localhost:3001/my-short-url",
+  "expiryDate": "...",
+  "originalUrl": "https://www.example.com"
+}
+```
 
-### Analyzing the Bundle Size
+### GET /:shortCode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Redirects to the original URL.
 
-### Making a Progressive Web App
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Backend Server Running
 
-### Advanced Configuration
+![Backend Server Running](<REPLACE_WITH_YOUR_BACKEND_IMAGE_URL>)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Localhost Results
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Localhost Results](<REPLACE_WITH_YOUR_LOCALHOST_IMAGE_URL>)
