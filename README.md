@@ -1,4 +1,4 @@
-# URL Shortener
+# URL SHORTENER
 
 This is a simple full-stack URL shortener application built with React and Node.js.
 
