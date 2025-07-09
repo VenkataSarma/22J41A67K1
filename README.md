@@ -79,7 +79,12 @@ Redirects to the original URL.
 ### Backend Server Running
 
 ![Backend Server Running](<REPLACE_WITH_YOUR_BACKEND_IMAGE_URL>)
+![image](https://github.com/user-attachments/assets/738ec7ac-28d4-4db3-8538-776f74b81b13)
+
 
 ### Localhost Results
 
 ![Localhost Results](<REPLACE_WITH_YOUR_LOCALHOST_IMAGE_URL>)
+![image](https://github.com/user-attachments/assets/f68cf4df-6091-48e8-8a89-78817371f8f7)
+![image](https://github.com/user-attachments/assets/4a49f04e-fa0a-4d32-817c-48fc7fa15f04)
+
